@@ -1,14 +1,15 @@
 import React from 'react';
-import './ProductoCard.css';
+import './ProductoCard.scss';
 
 const ProductoCard = (props) => {
 
     const {nombreProducto, precio, imagen} = props;
     return (
-        <div>
-            <img className="prod-image" src={imagen}/>
-            <p>{nombreProducto}</p>
-            <p>${precio}</p>
+        <div className="card-producto">
+            <img className="prod-image" src={imagen} alt="Imagen producto"/>
+            <p className="nombre-producto">{nombreProducto}</p>
+            <p className="precio-producto">${precio}</p>
+            <a href="a">Ver detalles </a>
         </div>
     )
 }
